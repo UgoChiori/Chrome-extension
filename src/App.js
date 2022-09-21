@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import { vocab } from "./cakevocab";
 
 function App() {
+  const randomNum = Math.floor(Math.random() * Math.floor(vocab.length));
+  const images = [
+    "./cupcake1.jpg",
+    "./cupcake2.jpg",
+    "./cupcake3.jpg",
+    "./cupcake4.jpg",
+    "./cupcake5.jpg",
+    "./cupcake6.jpg",
+    "./cupcake7.jpg",
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id="search-area">
+        <input type="text" placeholder="Search Google or type a URL"></input>
+
+        <button onClick={() => (window.location.href = "")}>
+          SEARCH
+        </button>
+      </div>
+      <h1>{vocab[randomNum].title}</h1>
+      <h3>{vocab[randomNum].previewDescription}</h3>
+
+      <div className="thumb-nails">
+      {images.map(image => {
+        console.log(image)
+        return (
+          
+            <img src={require(`${image}`)} alt="cakes" />
+          
+        );
+      })}
+      </div>
     </div>
   );
 }
