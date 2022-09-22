@@ -1,55 +1,71 @@
 body {
-  background-color: grey;
+    background-color: grey;
 }
 
 h1 {
-  margin-top: 5rem;
-  font-size: 36px;
-  color: black !important;
-  text-align: center;
+    margin-top: 5rem;
+    font-size: 36px;
+    color: black !important;
+    text-align: center;
 }
+
 h3 {
-  color: black;
-  font-size: 25px;
-  font-family: cursive;
-  text-align: center;
+    color: black;
+    font-size: 25px;
+    font-family: cursive;
+    text-align: center;
 }
+
 input {
-  border: 3px solid black;
-  display: block;
-
-  border-radius: 10px;
-  width: 500px;
-  padding: 10px;
+    border: 3px solid black;
+    display: block;
+    border-radius: 10px;
+    width: 500px;
+    padding: 10px;
 }
-button {
-  border: 2px solid black;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
 
-  font-size: 20px;
+button {
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
 }
 
 #search-area {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .thumb-nails {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 300px;
 }
 
 .thumb-nails img {
-  height: 150px;
-  width: 250px;
+    height: 150px;
+    width: 250px;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+@media screen and (max-width:768px) {
+    body {
+        background-color: rgb(22, 36, 40);
+        width: 100%;
+        overflow: hidden;
+    }
+    h1 {
+        font-size: 30px;
+        color: white;
+    }
+    h3 {
+        color: white;
+    }
+    .thumb-nails {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
 }
